@@ -31,7 +31,7 @@ import {
   installTheme,
   readPalette,
 } from "./profile";
-import { Pane, launchBrowser } from "./launch";
+import { Pane, launchBrowser, registerSelf } from "./launch";
 import { resolveRuntime, resolveRuntimeWithProgress } from "./runtime/release";
 import { INSTALL_ROOT } from "./runtime/paths";
 import { skillCommand } from "./skill";
@@ -248,6 +248,7 @@ async function openCommand(args: string[]): Promise<number> {
 
   const target = wanted[0] ?? resolveTarget(undefined, process.cwd());
   const runtime = await resolveRuntimeWithProgress();
+  registerSelf(runtime);
   done("runtime");
   await ensureCodeServer(narrateFetch(`code-server ${CODE_SERVER_VERSION}`));
   const { palette } = await readPalette();
