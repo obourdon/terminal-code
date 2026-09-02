@@ -72,7 +72,8 @@ jobs:
       matrix:
         # tode itself is only TypeScript, and the browser is fetched rather than
         # compiled, so one Linux runner can build every target's tarball.
-        target: [darwin-arm64, linux-x64, linux-arm64]
+        #target: [darwin-arm64, linux-x64, linux-arm64]
+        target: [darwin-x64, linux-x64]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

@@ -13,6 +13,11 @@ export const CODE_SERVER_VERSION = "4.132.0";
 /** tode target -> the name code-server releases under, and the sha256 GitHub
  * reports for that asset. */
 const CODE_SERVER_BUILDS: Record<string, { asset: string; sha256: string; size: number }> = {
+  "darwin-x64": {
+    asset: "macos-amd64",
+    sha256: "eddc7a8ea9d4575ae3e4813c624f7e012be191a0670d2e5187a6301fd59f6307",
+    size: 230542235,
+  },
   "darwin-arm64": {
     asset: "macos-arm64",
     sha256: "449814f6637faaf9b68544f7bce560f5ec500de688815d5c7f9afa7a51577992",
