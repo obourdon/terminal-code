@@ -8,6 +8,7 @@ PLATFORMS="__PLATFORMS__"
 
 case "$(uname -s)-$(uname -m)" in
   Darwin-arm64) TARGET=darwin-arm64 ;;
+  Darwin-x86_64) TARGET=darwin-x64 ;;
   Linux-x86_64|Linux-amd64) TARGET=linux-x64 ;;
   Linux-aarch64|Linux-arm64) TARGET=linux-arm64 ;;
   *)
